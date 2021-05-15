@@ -11,8 +11,8 @@
         android:id="@+id/constrainLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
         android:background="@android:color/background_light"
+        android:padding="5dp"
         tools:context=".MainActivity">
 
         <androidx.appcompat.widget.Toolbar
@@ -22,12 +22,14 @@
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
+            android:backgroundTint="@color/blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:subtitleTextColor="@android:color/background_light"
             app:title="Bluetooth Connection"
-            app:titleTextColor="@android:color/background_light" />
+            app:titleTextColor="@android:color/background_light"
+            app:backgroundTint="@color/blue"    />
 
         <Button
             android:id="@+id/buttonConnect"
@@ -38,7 +40,8 @@
             android:textColor="@android:color/background_light"
             app:layout_constraintBottom_toBottomOf="@+id/toolbar"
             app:layout_constraintEnd_toEndOf="@+id/toolbar"
-            app:layout_constraintTop_toTopOf="@+id/toolbar" />
+            app:layout_constraintTop_toTopOf="@+id/toolbar"
+            app:backgroundTint="@color/blue"    />
 
 
         <ProgressBar
@@ -58,35 +61,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="180dp"
             android:layout_marginEnd="16dp"
             android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonSend" />
-
-        <Button
-            android:id="@+id/buttonSend"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Send"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TextCommand" />
-
-        <EditText
-            android:id="@+id/TextCommand"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="116dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Command"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
@@ -99,7 +78,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:background="@color/colorAccent"
+            android:background="@color/blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewInfo" />
@@ -123,11 +102,13 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
+            android:max="50"
+            android:progress="25"
+            android:progressTint="@color/blue"
+            android:thumbTint="@color/lightBlue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Xview"
-            android:progress="25"
-            android:max="50"/>
+            app:layout_constraintTop_toBottomOf="@+id/Xview" />
 
         <SeekBar
             android:id="@+id/seekBarZ"
@@ -140,6 +121,8 @@
             android:layout_marginRight="8dp"
             android:max="50"
             android:progress="25"
+            android:progressTint="@color/blue"
+            android:thumbTint="@color/lightBlue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -156,6 +139,8 @@
             android:layout_marginRight="8dp"
             android:max="50"
             android:progress="25"
+            android:progressTint="@color/blue"
+            android:thumbTint="@color/lightBlue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -187,6 +172,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Send position"
+            app:backgroundTint="@color/blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textPositions" />
@@ -203,14 +189,103 @@
 
         <Button
             android:id="@+id/buttonCommand"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:text="List of commands"
+            app:backgroundTint="@color/blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonPosition" />
+
+        <Button
+            android:id="@+id/buttonPause"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="40dp"
+            android:text="Program Pause"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:backgroundTint="@color/blue"    />
+
+        <Button
+            android:id="@+id/buttonHome"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Home all axes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:backgroundTint="@color/blue" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/control_switch_background_border"
+            android:checkedButton="@+id/calm"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <RadioButton
+                android:id="@+id/buttonEnable"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/control_switch_background_selector_middle"
+                android:button="@null"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="Enable Steppers"
+                android:textColor="@drawable/control_switch_color_selector" />
+
+            <RadioButton
+                android:id="@+id/buttonDisable"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/control_switch_background_selector_middle"
+                android:button="@null"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="Disable Steppers"
+                android:textColor="@drawable/control_switch_color_selector" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/buttonAccelerometer"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Accelerometer"
+            app:layout_constraintEnd_toStartOf="@+id/buttonCommand"
+            app:layout_constraintHorizontal_bias="0.41"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonPosition" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
